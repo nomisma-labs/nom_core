@@ -1,21 +1,42 @@
 # nom_core
 
 <!-- repo-description:begin -->
-TODO: what nom_core is, in one paragraph.
+`nom_core` integrates Nomisma's core libraries: `base`, `assembly`, `spd_logger` and
+`json_config`. It selects compatible versions and provides a home for code that connects
+these components.
 <!-- repo-description:end -->
+
+This initial setup pins and builds the dependencies together. Shared glue code will be
+added under `src/` in subsequent work.
+
+## Dependencies
+
+| Repository | Pin | Purpose |
+| --- | --- | --- |
+| `base` | `v0.4.0` | Common types and utilities |
+| `assembly` | `v0.5.0` | Component composition and event routing |
+| `spd_logger` | `v0.7.0` | Operational logging |
+| `json_config` | `v0.6.0` | JSON configuration mapping, loading and generation |
+
+Dependencies are Git submodules under `external/`. CMake declares all four pins before
+loading them, so `spd_logger` and `json_config` share the selected `base` instance.
+Dependency applications and tests remain disabled by default when composed into this repo.
 
 ## Build
 
-Install the tools listed in [docs/kit/build.md](docs/kit/build.md#toolchain), then:
+Install the tools listed in the [build guide](docs/kit/build.md#toolchain), then run:
 
 ```bash
-./bootstrap.sh                   # fresh builds, tests and checks for every preset but release
-cmake --workflow --preset dev    # configure, build and test one preset
+git submodule update --init --recursive
+./bootstrap.sh
 ```
 
-Everyday commands, the presets and what bootstrap checks: [docs/kit/build.md](docs/kit/build.md).
+For a single build and the dependency integration test, use
+`cmake --workflow --preset complete`. The `dev` preset skips integration tests.
 
-## Docs
+## Documentation
 
-Agents start at [AGENTS.md](AGENTS.md), people at [docs/](docs/README.md). Adding a library, an
-app, tests or a dependency: [docs/kit/howto.md](docs/kit/howto.md). Releases: [CHANGELOG.md](CHANGELOG.md).
+- [Core integration and component guides](docs/nom_core/README.md)
+- [Build guide](docs/kit/build.md) and [development recipes](docs/kit/howto.md)
+- [Changelog](CHANGELOG.md)
+- [Agent instructions](AGENTS.md)
