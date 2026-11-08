@@ -15,7 +15,7 @@ added under `src/` in subsequent work.
 | --- | --- | --- |
 | `base` | `v0.4.0` | Common types and utilities |
 | `assembly` | `v0.5.0` | Component composition and event routing |
-| `spd_logger` | `v0.7.0` | Operational logging |
+| `spd_logger` | `v0.8.0` | Operational logging |
 | `json_config` | `v0.6.0` | JSON configuration mapping, loading and generation |
 
 Dependencies are Git submodules under `external/`. CMake declares all four pins before
