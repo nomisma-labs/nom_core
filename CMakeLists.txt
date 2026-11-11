@@ -7,7 +7,7 @@ include(cmake/kit/std_modules.cmake)
 
 # The version lives only here; releases are tagged v<version> (docs/kit/build.md#versioning).
 project(nom_core
-    VERSION 0.3.0
+    VERSION 0.3.1
     DESCRIPTION "Integration of Nomisma core libraries"
     LANGUAGES CXX)
 

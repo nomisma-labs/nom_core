@@ -6,6 +6,13 @@ and versions follow [Semantic Versioning](https://semver.org); how to release:
 
 ## [Unreleased]
 
+## [0.3.1] - 2026-11-12
+
+### Changed
+
+- Pin `base v0.6.0`, `json_config v0.7.1` and `spd_logger v0.9.1` so every active
+  base dependency uses the new repository history. The `nom.core` facade API is unchanged.
+
 ## [0.3.0] - 2026-11-12
 
 ### Added
