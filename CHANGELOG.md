@@ -6,9 +6,21 @@ and versions follow [Semantic Versioning](https://semver.org); how to release:
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-11-11
+
+### Changed
+
+- License project-owned code and documentation under MIT, retaining
+  Alexey Tkachenko's copyright. Third-party dependencies retain their own licenses.
+- Synchronize cmake_template v0.14.0 and record the repository license policy;
+  the shared kit retains MIT independently of the project selection.
+- Include the project license in installed artifacts alongside the applicable
+  toolchain and dependency notices.
+- Update internal dependency pins to `base v0.5.0`, `assembly v0.6.0`, `json_config v0.7.0`, `spd_logger v0.9.0`.
+
 ### Added
 
 - Initialize `nom_core` from `cmake_template v0.13.0` with the `src/` source layout.
-- Pin `base v0.4.0`, `assembly v0.5.0`, `spd_logger v0.8.0` and `json_config v0.6.0`,
+- Pin `base v0.5.0`, `assembly v0.6.0`, `spd_logger v0.9.0` and `json_config v0.7.0`,
   declaring direct dependencies before population to select one shared `base` instance.
 - Add a dependency integration test and documentation for the initial repository scope.

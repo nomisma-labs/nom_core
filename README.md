@@ -13,10 +13,10 @@ added under `src/` in subsequent work.
 
 | Repository | Pin | Purpose |
 | --- | --- | --- |
-| `base` | `v0.4.0` | Common types and utilities |
-| `assembly` | `v0.5.0` | Component composition and event routing |
-| `spd_logger` | `v0.8.0` | Operational logging |
-| `json_config` | `v0.6.0` | JSON configuration mapping, loading and generation |
+| `base` | `v0.5.0` | Common types and utilities |
+| `assembly` | `v0.6.0` | Component composition and event routing |
+| `spd_logger` | `v0.9.0` | Operational logging |
+| `json_config` | `v0.7.0` | JSON configuration mapping, loading and generation |
 
 Dependencies are Git submodules under `external/`. CMake declares all four pins before
 loading them, so `spd_logger` and `json_config` share the selected `base` instance.
@@ -40,3 +40,9 @@ For a single build and the dependency integration test, use
 - [Build guide](docs/kit/build.md) and [development recipes](docs/kit/howto.md)
 - [Changelog](CHANGELOG.md)
 - [Agent instructions](AGENTS.md)
+
+## License
+
+This project is licensed under [MIT](LICENSE). Copyright belongs to Alexey Tkachenko.
+The synchronized build kit retains its [MIT notice](cmake/kit/LICENSE); third-party
+dependencies retain their own licenses.
