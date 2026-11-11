@@ -6,6 +6,17 @@ and versions follow [Semantic Versioning](https://semver.org); how to release:
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-11-12
+
+### Added
+
+- Provide the `nom.core` module and `nom::core` CMake target, re-exporting core types, URL
+  utilities, assembly, logging and JSON configuration with transitive build dependencies.
+- Export JSON mappings for `log_level`, `logfile_config` and `log_config` through the
+  `nom.core:log_config` partition, preserving lowercase output and uppercase level aliases.
+- Install the facade as the `nom_core` CMake package and verify consumer imports, nested
+  logging configuration, serialization, defaults and invalid enum values.
+
 ## [0.2.0] - 2026-11-11
 
 ### Changed

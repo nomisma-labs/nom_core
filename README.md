@@ -6,8 +6,13 @@
 these components.
 <!-- repo-description:end -->
 
-This initial setup pins and builds the dependencies together. Shared glue code will be
-added under `src/` in subsequent work.
+The `nom.core` module re-exports their public C++ modules and supplies JSON mappings for
+logging configuration. Link the `nom::core` CMake target and use `import nom.core;`.
+Macro users still include the owning library's header directly, such as
+`<json_config/config.h>` or `<spd_logger/logging.h>`, before module imports.
+
+See the [usage guide](docs/nom_core/README.md) for the exported modules, configuration mapping,
+and source or installed-package consumption.
 
 ## Dependencies
 
