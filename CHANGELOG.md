@@ -6,6 +6,11 @@ and versions follow [Semantic Versioning](https://semver.org); how to release:
 
 ## [Unreleased]
 
+## [0.3.2] - 2026-11-24
+
+- Support CMake 4.5 native `import std` and retain CMake 4.4 support through cmake_template v0.14.1.
+- Update dependency pins to assembly v0.6.1, base v0.6.1, json_config v0.7.2, spd_logger v0.9.2.
+
 ## [0.3.1] - 2026-11-12
 
 ### Changed
